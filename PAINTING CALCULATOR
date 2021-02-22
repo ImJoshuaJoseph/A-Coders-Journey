@@ -1,0 +1,53 @@
+#This program calculates the cost, minutes and hours, it would take to paint the total of square feet
+#Made by Johua Joseph
+
+print(" 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗚𝗘𝗡𝗘𝗥𝗔𝗟 𝗣𝗔𝗜𝗡𝗧𝗘𝗥𝗦! \n")   #<<TITLE
+
+print("𝗟𝗘𝗧'𝗦 𝗦𝗧𝗔𝗥𝗧 𝗪𝗜𝗧𝗛 𝗦𝗢𝗠𝗘 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗧𝗜𝗢𝗡: \n")    #<<ASKS FOR INFORMATION
+
+print("𝘾𝙊𝙎𝙏 𝙋𝙀𝙍 𝙎𝙌𝙐𝘼𝙍𝙀 𝙁𝙏: ")    #<<GET THE COST PER SQUARE FT
+cost = int(input("$"))
+
+print("𝗠𝗜𝗡𝗨𝗧𝗘𝗦 𝗣𝗘𝗥 𝗦𝗤𝗨𝗔𝗥𝗘 𝗙𝗧 (𝗢𝗡𝗘 𝗪𝗢𝗥𝗞𝗘𝗥): ")    #<<GETS THE MINUTE PER SQUARE FT
+minutes = int(input(":"))
+print(" ")
+
+#________________________________________________________________________________________
+
+#GETS FOR THE LENGTH AND WIDTH TO BE PAINTED
+print("𝗔𝗥𝗘 𝗧𝗢 𝗕𝗘 𝗣𝗔𝗜𝗡𝗧𝗘𝗗: ")
+length = int(input("𝗟𝗘𝗡𝗚𝗧𝗛: "))
+width = int(input("𝗪𝗜𝗗𝗧𝗛: "))
+print(" ")
+print("𝗧𝗢𝗧𝗔𝗟 𝗔𝗥𝗘𝗔: ",length*width)#<< TOTAL AREA 
+print(" ")
+
+#________________________________________________________________________________
+
+mins = int(minutes * length*width % 60)#<<CALCULATES THE MINUTES
+
+hours = int(mins - minutes % 60 )#<<CALCULATES THE HOURS
+
+#________________________________________________________________________________
+
+
+print("𝗧𝗢𝗧𝗔𝗟 𝗖𝗢𝗦𝗧 𝗧𝗢 𝗣𝗔𝗜𝗡𝗧",length*width,"𝗦𝗤𝗨𝗔𝗥𝗘 𝗙𝗘𝗘𝗧 𝗜𝗦, $",length*width*cost)#<<GIVES INFO OF THE COST AND HOW MUCH TO BE PAINTED
+print("")
+print("𝗧𝗛𝗜𝗦 𝗪𝗜𝗟𝗟 𝗧𝗔𝗞𝗘 𝗨𝗦 𝗔𝗣𝗣𝗥𝗢𝗫𝗜𝗠𝗔𝗧𝗘𝗟𝗬",hours,"𝗛𝗢𝗨𝗥𝗦 𝗔𝗡𝗗",mins,"𝗠𝗜𝗡𝗨𝗧𝗘𝗦 \n")#<<GIVES THE APROXIAMTE TIME
+
+#________________________________________________________________________________
+
+print("𝗔𝗠𝗢𝗨𝗡𝗧 𝗢𝗙 𝗪𝗢𝗥𝗞𝗘𝗥𝗦:")#<<AMOUNT OF WORKERS
+workers = int(input(": "))
+print(" ")
+new_mins =  int(minutes / workers * length*width % 60)#<<NEW MINUTES
+
+new_hours =  int(hours / workers * length*width % 24)#<<NEW HOURS
+
+print("𝗗𝗨𝗘 𝗧𝗢",workers,"𝗪𝗢𝗥𝗞𝗘𝗥𝗦 𝗔𝗗𝗗𝗘𝗗 𝗧𝗢 𝗧𝗛𝗘 𝗝𝗢𝗕. \n")
+
+print("𝗧𝗛𝗘 𝗧𝗢𝗧𝗔𝗟 𝗧𝗜𝗠𝗘 𝗧𝗢 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗘 𝗧𝗛𝗘 𝗝𝗢𝗕 𝗪𝗜𝗟𝗟 𝗕𝗘",new_hours,"𝗛𝗢𝗨𝗥𝗦 𝗔𝗡𝗗",new_mins,"𝗠𝗜𝗡𝗨𝗧𝗘𝗦 \n")#<<GIVES THE NEW TIME
+
+print("【ＴＨＡＮＫ　ＹＯＵ　ＦＯＲ　ＷＯＲＫＩＮＧ　ＷＩＴＨ　ＵＳ】")#<<STATEMENT OF QUOTE
+
+#________________________________________________________________________________
