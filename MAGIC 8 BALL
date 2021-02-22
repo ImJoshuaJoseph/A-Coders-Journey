@@ -1,0 +1,43 @@
+#This program answers your yes or no questions
+#I got the inspiration from those magic 8 ball toys, so your answers are not accurately correct
+#Made by Joshua Joseph
+
+#________________________________________________________________________
+
+import random   #< <RANDOM MODULE
+import time    #<< TIME MODULE
+
+#____________________________________________________________________
+
+time.sleep(2)
+print("Welcome To Decider! \n")   #<< INTRO
+
+time.sleep(2)
+print("This program decides your yes or no questions \n")  #<< GIVES THE USER A GUIDE
+
+time.sleep(2)
+print("Say 'stop', to quit \n")   #<<TELLS THE USER WHAT TO DO TO STOP THE PROGRAM
+
+time.sleep(2)
+yesno = "Yes","No"    #<< VARIABLE STORING THE ANSWERS TO BE RANDOMLY CHOSEN
+
+#________________________________________________________________________________________________________
+
+while True:   #<< WHILE TRUSE STATEMET
+    
+    print("Ask me a yes or  no question: ")   
+    print(" ")
+    question = input(":")   #<< GIVES THE USER THE ABILITY TO ASK THEIR YES OR NO QUESTION
+    print(" ")
+    
+    time.sleep(1)
+    print("Loading.. \n")   #<< PRINTS LOADING
+    
+    print(random.choice(yesno))   #<<RANDOM MODULE SELECTS A RANDOM VALUE, FROM THE (yesno) VARIABLE ABOVE
+    print(" ")
+    
+    if question.capitalize() == "stop":   #<< IF THE USER ENTERS "stop", IN THE INPUT FIELD, IT BREAKS THE WHILE TRUE STATEMENT
+        break
+        
+#________________________________________________________________________________________________________
+        
