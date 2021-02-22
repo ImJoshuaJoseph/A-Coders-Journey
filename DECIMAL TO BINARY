@@ -1,0 +1,10 @@
+def binary(num):
+    
+    if num > 1:
+        binary(num//2)
+    print(num % 2, end = " ")
+    
+        
+number = int(input("ENTER: "))
+
+binary(number)
