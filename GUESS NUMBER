@@ -1,0 +1,49 @@
+#This program is a Guessing The Number program
+#Made by Joshua Joseph
+
+#____________________________________________________________________________________________________________________________
+
+import time      #<< TIME MODULE
+import random    #<< RANDOM MODULE
+
+#____________________________________________________________________________________________________________________________
+
+
+username = input("USERNAME: ")   #<< ASKS THE USER FOR THEIR USERNAME
+print(" ")
+
+
+time.sleep(2)
+print("WELCOME",username,"TO GUESS NUM \n")    #<< TELLS THE USER WELCOME
+
+
+time.sleep(2)
+print("Instructions \n")   #<< GIVES THE USER THE INSTRUCTIONS
+time.sleep(3)
+print("You will be asked to guess a number from 1 to 10 \n")
+
+
+time.sleep(3)
+print("READY, SET, LET'S BEGIN !! \n")   #<<BEGINS THE PROGRAM
+
+time.sleep(2)
+#____________________________________________________________________________________________________________________________
+
+while True:    #WHILE TRUE STATEMENT
+    
+    print(" ")
+    
+    num = random.randint(1,10)
+    
+    print("Guess The Number: \n")
+
+    guesser = int(input(":"))
+    print(" ")
+
+    if guesser == num:
+        
+        print("WINNER!")
+        
+    else:
+        
+        print("LOST")
